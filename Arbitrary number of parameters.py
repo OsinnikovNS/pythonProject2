@@ -15,5 +15,5 @@ def factorial(n):
         return 1
     return factorial(n - 1) * n
 
-n = int(input('Введите число n:'))
-print(factorial(n))
+n = int(input('Введите число n: '))
+print('факториал от числа', n, '=', factorial(n))
