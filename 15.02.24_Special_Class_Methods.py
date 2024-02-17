@@ -8,20 +8,14 @@
 
 class House:
     def __init__(self):
-        self.number_of_floors = [0]
+        self.number_of_floors = 0
 
     def setNewNumberOfFloors(self, floors):
         """Метод, который изменяет атрибут numberOfFloors на параметр floors
         и выводить в консоль numberOfFloors"""
-        self.number_of_floors.append(floors)
-        print(self.number_of_floors)
-
-    def inspect(self):
-        """Проверка этажей"""
-        for floors in self.number_of_floors:
-            print('этажей', floors)
+        self.numberOfFloors = floors
+        print(self.numberOfFloors)
 
 
 my_house = House()
-my_house.setNewNumberOfFloors(floors=5)
-my_house.inspect()
+my_house.setNewNumberOfFloors(floors=9)
