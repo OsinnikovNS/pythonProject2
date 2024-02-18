@@ -19,6 +19,7 @@ class Building:
     def __eq__(self, other):  # переопределяем атрибуты
         return self.numberOfFloors == other.numberOfFloors and self.buildingType == other.buildingType
 
+
 building_1 = Building(5, 'кирпич')
 building_2 = Building(5, 'кирпич')
 building_3 = Building()
