@@ -1,3 +1,4 @@
+#  "Файлы в операционной системе".
 import os
 import time
 
@@ -14,3 +15,4 @@ for root, dirs, files in os.walk(directory):
               f"Время изменения: {formatted_time}, Родительская директория: {parent_dir}")
 print(os.walk(directory))
 print("Текущая директория:", os.getcwd())  # напечатать наименование текущей директории
+
