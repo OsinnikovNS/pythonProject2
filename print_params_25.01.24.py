@@ -23,5 +23,5 @@ print(vector(**values_dict))
 
 # Распаковка + отдельные параметры:
 values_list_2 = [11, 'строка']
-print(print_params(*values_list_2,42 ))
+print(print_params(*values_list_2, 42))
 # Распаковка + отдельные параметры - работает

@@ -1,3 +1,48 @@
+import math
+
+
+class Vector2D:
+
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y
+
+    def __sub__(self, other):
+        return Vector2D(self.x - other.x, self.y - other.y)
+
+    def __isub__(self, other):
+        self.x -= other.x
+        self.y -= other.y
+        return self
+
+    def __abs__(self):
+        return math.hypot(self.x, self.y)
+
+    def __bool__(self):
+        return self.x != 0 or self.y != 0
+
+    def __neg__(self):
+        return Vector2D(-self.x, -self.y)
+
+
+x = Vector2D(3, 4)
+
+Vector2D(3, 4)
+print(x)
+
+
+# class A:
+#     def __init__(self, name, age, growth, weight):
+#         self.name = name
+#         self.age = age
+#         self.growth = growth
+#         self.weight = weight
+#
+#
+# a = A('Вася', 99, 165, 78)
+#
+# print('Имя:', a.name, 'Возраст:', a.age, 'Вес:', a.weight, 'Рост:', a.growth)
+
 # def test2(x, y, z):
 #     return (x*2+y*2+z*2)
 #
@@ -69,25 +114,25 @@
 
 # Листинг 1
 # вводим N
-n = int(input("введите n: "))
-# создаем пустой список для хранения простых чисел
-lst = []
-# в k будем хранить количество делителей
-k = 0
-# пробегаем все числа от 2 до N
-for i in range(2, n + 1):
-    # пробегаем все числа от 2 до текущего
-    for j in range(2, i):
-        # ищем количество делителей
-        if i % j == 0:
-            k += k
-    # если делителей нет, добавляем число в список
-    if k == 0:
-        lst.append(i)
-    else:
-        k = 0
-# выводим на экран список
-print(lst)
-# перемножаем все числа в списке:
-import functools
-print (functools.reduce(lambda a, b : a * b, lst))
+# n = int(input("введите n: "))
+# # создаем пустой список для хранения простых чисел
+# lst = []
+# # в k будем хранить количество делителей
+# k = 0
+# # пробегаем все числа от 2 до N
+# for i in range(2, n + 1):
+#     # пробегаем все числа от 2 до текущего
+#     for j in range(2, i):
+#         # ищем количество делителей
+#         if i % j == 0:
+#             k += k
+#     # если делителей нет, добавляем число в список
+#     if k == 0:
+#         lst.append(i)
+#     else:
+#         k = 0
+# # выводим на экран список
+# print(lst)
+# # перемножаем все числа в списке:
+# import functools
+# print(functools.reduce(lambda a, b: a * b, lst))

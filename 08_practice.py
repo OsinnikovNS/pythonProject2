@@ -4,7 +4,6 @@
 # Если сытость <0 единиц, человек умирает.
 # Человеку надо прожить 365 дней
 from random import randint
-
 from termcolor import cprint
 
 
@@ -14,6 +13,7 @@ class Man:
         self.fullness = 50
         self.food = 50
         self.money = 0
+
     def __str__(self):
         return 'я - {}, сытость {}, еды осталось {}, денег осталось {}'.format(
             self.name, self.fullness, self.food, self.money)
@@ -31,8 +31,8 @@ class Man:
         self.money += 50
         self.fullness -= 10
 
-    def play_DOTA(self):
-        cprint('{} играл в доту целый день'.format(self.name), color='green')
+    def watch_tv(self):
+        cprint('{} смотрел МТВ целый день'.format(self.name), color='green')
         self.fullness -= 10
 
     def shopping(self):
@@ -56,22 +56,23 @@ class Man:
             self.work()
         elif dice == 1:
             self.work()
-        elif dice == 1:
-            self.work()
         elif dice == 2:
             self.eat()
         else:
-            self.play_DOTA()
+            self.watch_tv()
 
 
 vasya = Man(name='Вася')
+kolya = Man(name='Коля')
 for day in range(1, 21):
     cprint('*************** день ******************'.format(day), color='blue')
     vasya.act()
+    kolya.act()
     print(vasya)
+    print(kolya)
 
-# Создаем двух людей, живущих в одном доме - Васю и Батхеда
-#Нужен класс Дом, в нем должен быть холодильник с едой и тумбочка с деньгами
+# Создаем двух людей, живущих в одном доме - Васю и Колю
+# Нужен класс Дом, в нем должен быть холодильник с едой и тумбочка с деньгами
 # Еда пусть хранится в холодильнике в доме, а деньги - в тумбочке
 
 vasya = Man(name='Вася')
@@ -80,5 +81,5 @@ vasya.eat()
 print(vasya)
 vasya.work()
 print(vasya)
-vasya.play_DOTA()
+vasya.watch_tv()
 print(vasya)

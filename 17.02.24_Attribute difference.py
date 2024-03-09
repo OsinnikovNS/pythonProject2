@@ -6,6 +6,29 @@
 
 from random import random, randint
 
+# class Building:
+#     pass
+#
+# total_building = 0
+# building_1 = Building()
+# total_building += 1
+#
+# building_2 = Building()
+# total_building += 1
+#
+# building_3 = Building()
+# total_building += 1
+#
+# quantity = []
+# quantity_size = random.randint(1, 41)
+# while len(quantity) < quantity_size:
+#     new_building = Building()
+#     quantity.append(new_building)
+#     total_building += 1
+#
+# print(total_building)
+
+
 class Building:
     total = 0
 

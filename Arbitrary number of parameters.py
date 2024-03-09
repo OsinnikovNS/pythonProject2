@@ -6,6 +6,7 @@ def test(*args):
     for i, arg in enumerate(args):
         print('позиционный параметр:', i, arg)
 
+
 test(10, 'Привет', 11.1, 4, 7, 9)
 
 
@@ -14,6 +15,7 @@ def factorial(n):
     if n == 1:
         return 1
     return factorial(n - 1) * n
+
 
 n = int(input('Введите число n: '))
 print('факториал от числа', n, '=', factorial(n))
