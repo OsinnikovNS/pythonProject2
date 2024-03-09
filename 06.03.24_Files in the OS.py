@@ -2,7 +2,7 @@
 import os
 import time
 
-directory = 'D:/Temp/Books Python'  # Указать путь к вашему каталогу
+directory = 'C:/DRIVERS'  # Указать путь к вашему каталогу
 
 for root, dirs, files in os.walk(directory):
     for file in files:
