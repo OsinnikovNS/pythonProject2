@@ -5,6 +5,8 @@ def string_to_int(s):  # добавить обработку ValueError
         return int(s)
     except ValueError:
         return f"Ошибка: невозможно преобразовать '{s}' в целое число."
+    except ():  # добавление обработки всех исключений
+        return f'Ошибка'
 
 
 def read_file(filename):  # добавить обработку FileNotFoundError, IOError
@@ -25,7 +27,7 @@ def divide_numbers(a, b):  # добавить обработку ZeroDivisionErr
     except TypeError:
         return f"Ошибка: аргументы должны быть числами"
 
-
+#
 def access_list_element(lst, index):  # добавить обработку IndexError, TypeError
     try:
         return lst[index]
@@ -33,3 +35,5 @@ def access_list_element(lst, index):  # добавить обработку Inde
         return f"Ошибка: индекс {index} вне диапазона списка"
     except TypeError:
         return f"Ошибка: индекс должен быть целым числом"
+
+
