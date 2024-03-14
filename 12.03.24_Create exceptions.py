@@ -1,6 +1,4 @@
 # Освоить механизмы создания и обработки исключений в Python.
-# Функция, которая генерирует различные исключения в зависимости
-# от передаваемых ей аргументов
 
 class ProcessingException(Exception):
     pass
@@ -21,17 +19,24 @@ except InvalidDataException as exc2:
     print(f'Конец обработки исключения InvalidDataException. {exc2}')
 
 
+"""Функция, которая генерирует различные исключения в зависимости
+от передаваемых ей аргументов"""
+
+
 def numbers(a, b):
     if b == 0:
         raise InvalidDataException
     # return a / b
     if a < 10:
         raise ProcessingException
-    return a / b
+    return
 
+
+""" Добавляем обработку исключений в функции 
+и передаем исключения дальше по стеку вызовов."""
 
 try:
-    res = numbers(10, 0)
+    numbers(10, 0)
 except ProcessingException:
     print('Исключение ProcessingException.')
 except InvalidDataException:
