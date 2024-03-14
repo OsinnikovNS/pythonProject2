@@ -26,7 +26,6 @@ except InvalidDataException as exc2:
 def numbers(a, b):
     if b == 0:
         raise InvalidDataException
-    # return a / b
     if a < 10:
         raise ProcessingException
     return
