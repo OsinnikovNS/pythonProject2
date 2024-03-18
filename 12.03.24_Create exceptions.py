@@ -35,7 +35,7 @@ def numbers(a, b):
 и передаем исключения дальше по стеку вызовов."""
 
 try:
-    numbers(10, 0)
+    numbers(10, 5)
 except ProcessingException:
     print('Исключение ProcessingException.')
 except InvalidDataException:
