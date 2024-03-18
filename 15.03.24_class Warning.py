@@ -20,11 +20,8 @@ for i in range(99, 102):
     b = 1 / i
     c = 1 / b
     if b < 0.01:
-
         warnings.simplefilter('error', UserWarning)
         function_with_warning()
-        # print("\n")
-        # print('риск деления на "0"', UserWarning)
     else:
         print('Программа нормально отрабатывает функцию при i =', i)
 
