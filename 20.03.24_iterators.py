@@ -13,6 +13,8 @@ class EvenNumbers:
         # self.value = self.start - self.step
 
     def __iter__(self):
+        if self.start % 2 == 1:
+            self.start = self.start + 1
         self.value = self.start - self.step
         return self
 
