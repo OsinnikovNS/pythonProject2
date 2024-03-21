@@ -6,14 +6,15 @@ end – конечное значение (если значение не пер
 
 
 class EvenNumbers:
-    def __init__(self, start=0, end=1):
+    def __init__(self, start=0, end=1, step=1):
         self.start = start
         self.end = end
-        self.step = 2
+        self.step = step
+        # self.value = self.start - self.step
 
     def __iter__(self):
         self.value = self.start - self.step
-        return
+        return self
 
     def __next__(self):
         if self.value + self.step < self.end:
@@ -23,11 +24,6 @@ class EvenNumbers:
             raise StopIteration
 
 
-en = EvenNumbers(10, 25)
+en = EvenNumbers(10, 25, 2)
 for i in en:
     print(i)
-
-
-# for i in range(10, 25):
-#     if int(i) % 2 == 0:
-#         print(i)
