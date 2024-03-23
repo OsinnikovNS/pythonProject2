@@ -1,28 +1,31 @@
 """Напишите 2 функции:
-Функция которая складывает 3 числа (sum_three)
-Функция декоратор (is_prime), которая распечатывает "Простое", если результат
+1. Функцию, которая складывает 3 числа (sum_three);
+2. Функцию декоратор (is_prime), которая распечатывает "Простое", если результат
  1ой функции будет простым числом и "Составное" в противном случае."""
 
-def sum_three(a, b, c):
-    res = a + b + c
-    return res
 
-
-def is_prime():
-    def wrapper():
-        res = sum_three()
-        for i in range(2, res // 2 + 1):
-            if res % i == 0:
+def is_prime(func):  # Функция декоратор
+    def wrapper(*args):
+        k = 0
+        for i in range(2, sum(args) // 2 + 1):
+            if sum(args) % i == 0:
                 k = k + 1
-        if (k <= 0):
-            print("Число простое")
+        if k <= 0:
+            print("Простое")
         else:
-            print("Число не является простым")
+            print("Составное")
+        print(sum(args))
+
+    return wrapper
 
 
-result = sum_three(2, 3, 6)
-print(result)
+# @is_prime
+def sum_three(*args):
+    print(sum(args))
+    return
 
-
-
-
+print('Без декоратора функция sum_three:')
+sum_three(1, 3, 6)
+print('С декоратором is_prime, функция sum_three:')
+decorator = is_prime(sum_three)
+decorator(2, 3, 6)
