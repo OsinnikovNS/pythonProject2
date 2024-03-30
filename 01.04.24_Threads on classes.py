@@ -10,20 +10,21 @@ class Knight(Thread):
         self.skill = skill
 
     def run(self, attack=100):
+        i = 0
         print(f'{self.name},  на нас напали!')
         victory = int(attack / self.skill)
-        for _ in range(1, attack + 1, self.skill):
+        for _ in range(0, attack + 1, self.skill):
             attack = attack - self.skill
+            i = i + 1
             time.sleep(1)
-            if attack <= 0:
+            if attack < 0:
                 print(f' ********* Рыцарь {self.name} одержал победу спустя {victory} дней! *********')
             else:
-                print(f' Рыцарь {self.name} сражается, осталось {attack} врагов.')
+                print(f' Рыцарь {self.name} сражается {i} день(дня), осталось {attack} врагов.')
 
 
 knight1 = Knight("Sir Lancelot", 10)  # Низкий уровень умения
 knight2 = Knight("Sir Galahad", 20)  # Высокий уровень умения
-
 knight1.start()
 knight2.start()
 knight1.join()
