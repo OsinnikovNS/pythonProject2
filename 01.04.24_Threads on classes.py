@@ -15,7 +15,7 @@ class Knight(Thread):
         victory = int(attack / self.skill)
         for _ in range(0, attack + 1, self.skill):
             attack = attack - self.skill
-            i = i + 1
+            i += 1
             time.sleep(1)
             if attack < 0:
                 print(f' ********* Рыцарь {self.name} одержал победу спустя {victory} дней! *********')
