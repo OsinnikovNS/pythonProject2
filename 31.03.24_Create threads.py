@@ -16,8 +16,8 @@ def my_list():
 
 
 t1 = threading.Thread(target=num)
-
 t2 = threading.Thread(target=my_list)
+
 t1.start()
 # t1.join()
 t2.start()
