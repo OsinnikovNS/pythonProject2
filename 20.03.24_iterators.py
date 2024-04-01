@@ -10,7 +10,6 @@ class EvenNumbers:
         self.start = start
         self.end = end
         self.step = step
-        # self.value = self.start - self.step
 
     def __iter__(self):
         if self.start % 2 == 1:
