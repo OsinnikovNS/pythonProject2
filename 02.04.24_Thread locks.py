@@ -26,9 +26,6 @@ class BankAccount:
             else:
                 print("Недостаточно средств на счете")
 
-    def display(self):
-        print("Net Available Balance=", self.balance)
-
 
 s = BankAccount()
 deposit_thread = threading.Thread(target=s.deposit_task())
