@@ -33,7 +33,7 @@ class Rect:
         self.a = a
 
     def __call__(self, b):
-        return b * self.a
+        return self.a * b
 
 
 area = Rect(2)
