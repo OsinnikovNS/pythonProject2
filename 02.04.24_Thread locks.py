@@ -6,7 +6,6 @@ import time
 
 class BankAccount:
     def __init__(self):
-        self.locker = None
         self.lock = threading.Lock()
         self.balance = 1000
 
