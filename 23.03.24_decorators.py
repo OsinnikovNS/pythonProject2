@@ -3,7 +3,6 @@
 # TODO 2. Функцию декоратор (is_prime), которая распечатывает "Простое", если результат
 #  1ой функции будет простым числом и "Составное" в противном случае.
 
-
 def is_prime(func):  # Функция декоратор
     def wrapper(*args):
         k = 0
@@ -23,6 +22,7 @@ def is_prime(func):  # Функция декоратор
 def sum_three(*args):
     print(sum(args))
     return
+
 
 print('Без декоратора функция sum_three:')
 sum_three(1, 3, 6)
