@@ -16,7 +16,6 @@ class Fisher(Process):
     def run(self):
         for worm in range(self.worms):
             print(f'{self.name}: Червяк № {worm} - забросили, ждем...', flush=True)
-            _ = 3 ** (random.randint(50, 70) * 10000)
             fish = random.choice(FISH)
             if fish is not None:
                 print(f'{self.name}: Ага, у меня {fish}', flush=True)
