@@ -45,6 +45,11 @@ class Cafe(threading.Thread):
         print(f'Посетитель номер {self.number}, сел за стол. (начало обслуживания)', flush=True)
 
 
+class Customer:
+    def __init__(self):
+        pass
+
+
 table1 = Table(1)
 table2 = Table(2)
 table3 = Table(3)
