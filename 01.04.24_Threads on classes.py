@@ -26,7 +26,7 @@ class Knight(Thread):
 knight1 = Knight("Sir Lancelot", 10)  # Низкий уровень умения
 knight2 = Knight("Sir Galahad", 20)  # Высокий уровень умения
 knight1.start()
-knight2.start()
 knight1.join()
+knight2.start()
 knight2.join()
 print('Всё битвы закончились!')
