@@ -26,7 +26,7 @@ class Fisher(Process):
 global_fish_tank = defaultdict(int)
 if __name__ == '__main__':
     humans = ['Вася', 'Коля', 'Петрович', 'Хмурый', 'Клава',]
-    fishers = [Fisher(name=name, worms=1000, fish_tank=global_fish_tank) for name in humans]
+    fishers = [Fisher(name=name, worms=10000, fish_tank=global_fish_tank) for name in humans]
 
     for fisher in fishers:
         fisher.start()

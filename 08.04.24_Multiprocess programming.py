@@ -35,10 +35,10 @@ for i in range(count):
 print(f'product1: {product1}, product2: {product2}, product3: {product3}')
 
 
-# class WarehouseManager:
-#     # класс менеджера склада
-#     def __init__(self, data, *args, **kwargs):
-#         self.data = {}
+class WarehouseManager:
+    # класс менеджера склада
+    def __init__(self, data, *args, **kwargs):
+        self.data = {}
 #
 #
 #     def process_request(self):
