@@ -16,7 +16,7 @@ class Cafe:
 
     def customer_arrival(self):
         for i in range(1, 21):
-            time.sleep(.01)
+            time.sleep(1)
             print(f"Посетитель номер {i} прибыл")
             customer = {"number": i}
             if i > 3:
@@ -28,7 +28,7 @@ class Cafe:
             if not table.is_busy:
                 table.is_busy = True
                 print(f"Посетитель номер {customer['number']} сел за стол {table.number}")
-                time.sleep(.05)
+                time.sleep(5)
                 print(f"Посетитель номер {customer['number']} покушал и ушёл")
                 table.is_busy = False
                 return
