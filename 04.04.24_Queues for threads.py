@@ -18,21 +18,20 @@ class Cafe:
         for i in range(1, 21):
             time.sleep(.01)
             print(f"Посетитель номер {i} прибыл")
-            time.sleep(0.4)
             customer = {"number": i}
+            if i > 3:
+                print(f"Посетитель номер {customer['number']} ожидает свободный стол")
             self.queue.put(customer)
 
     def serve_customer(self, customer):
-
         for table in self.tables:
             if not table.is_busy:
                 table.is_busy = True
                 print(f"Посетитель номер {customer['number']} сел за стол {table.number}")
-                time.sleep(2)
-                table.is_busy = False
+                time.sleep(.05)
                 print(f"Посетитель номер {customer['number']} покушал и ушёл")
+                table.is_busy = False
                 return
-            print(f"Посетитель номер {customer['number']} ожидает свободный стол")
         self.queue.put(customer)
 
 
