@@ -6,18 +6,27 @@
 # Поясните, как выбранные библиотеки помогли в решении поставленных задач и какие преимущества
 # они предоставили по сравнению с базовым функционалом Python.
 # ------------------------------------------------------------------------------
-#
 import requests
 
-url = 'https://www.eda1.ru/pizza'
-data = requests.get(url)
-print(data.text)
+api_key = 'e92c5026eb2a466eb09e1591f5ee035f'
 
-# def get_contracts():
-#     url = 'https://www.citilink.ru/catalog/'
-#     data = requests.get(url).json()
-#     return data
-#
-#
-# result = get_contracts()
-# print(result)
+city = input('Введите город (например Moscow): ')
+url = f'https://api.openweathermap.org/data/2.5/weather?q={city}&units=metric&appid={api_key}'
+
+response = requests.get(url)
+
+if response.status_code == 200:
+    data = response.json()
+    temp = data['main']['temp']
+    pressure = data['main']['pressure']
+    humidity = data['main']['humidity']
+    visibility = data['visibility']
+    desc = data['weather'][0]['description']
+
+    print(f'Температура: {temp} C')
+    print(f'Давление: {pressure} мм')
+    print(f'Влажность: {humidity} %')
+    print(f'Видимость: {visibility} м')
+    print(f'Описание: {desc}')
+else:
+    print('Ошибка при получении данных о погоде')
