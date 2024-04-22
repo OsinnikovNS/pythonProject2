@@ -15,7 +15,6 @@ class WarehouseManager(multiprocessing.Process):
         ]
         count, product1, product2, product3 = 0, 0, 0, 0
         for _ in requests:
-            time.sleep(0.1)
             count += 1
         print(f'количество запросов: {count}')
         for i in range(count):
