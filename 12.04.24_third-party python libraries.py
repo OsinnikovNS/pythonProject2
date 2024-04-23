@@ -10,7 +10,7 @@ import requests
 from datetime import datetime as dt
 
 api_key = 'e92c5026eb2a466eb09e1591f5ee035f'
-
+# для возможности ввода наименования города с клавиатуры
 # city = input('Введите город (например Moscow): ')
 spisok = ('Yekaterinburg', 'Perm', 'Kazan', 'Berezniki')
 # print(len(str))
