@@ -11,7 +11,6 @@ class WarehouseManager(multiprocessing.Process):
             ("product1", "shipment", 30),
             ("product3", "receipt", 200),
             ("product2", "shipment", 100),
-
         ]
         count, product1, product2, product3 = 0, 0, 0, 0
         for _ in requests:
@@ -40,11 +39,10 @@ class WarehouseManager(multiprocessing.Process):
                 else:
                     print(f'Для отгрузки, товара на складе недостаточно, product2 = {product2}')
             if product == str('product3') and request == str('shipment'):
-                if product == str('product3') and request == str('shipment'):
-                    if product3 >= data:
-                        product3 -= data
-                    else:
-                        print(f'Для отгрузки, товара на складе недостаточно, product3 = {product3}')
+                if product3 >= data:
+                    product3 -= data
+                else:
+                    print(f'Для отгрузки, товара на складе недостаточно, product3 = {product3}')
 
         prod = {f'product1: {product1}, product2: {product2}, product3: {product3}'}
         print(prod)
