@@ -12,7 +12,7 @@ class TestStudent(unittest.TestCase):
             student1.run()
             """тестируем с дистанцией 1000 м"""
         self.assertEqual(student1.distance, 1000,
-                             f'Дистанции не равны [дистанция студента {student1.name}] != 1000')
+                         f'Дистанции не равны [дистанция студента {student1.name}] != 1000')
 
     """Метод - тест от метода walk - пеший ход на дистанцию 10 раз по 5 м"""
 
@@ -22,7 +22,7 @@ class TestStudent(unittest.TestCase):
             student2.walk()
             """тестируем с дистанцией 500 м"""
         self.assertEqual(student2.distance, 500,
-                             f'Дистанции не равны [дистанция студента {student2.name}] != 500')
+                         f'Дистанции не равны [дистанция студента {student2.name}] != 500')
 
     """Тест на проверку дистанции (человек бегущий > человек идущий)"""
 
@@ -35,7 +35,7 @@ class TestStudent(unittest.TestCase):
             student2.walk()
             res2 = student2.distance
         self.assertGreater(res1, res2,
-                               f'Идущий {student2.name} должен преодолеть дистанцию меньше, чем бегущий {student1.name}')
+                           f'Идущий {student2.name} должен преодолеть дистанцию меньше, чем бегущий {student1.name}')
 
     """Тест на проверку дистанции (человек бегущий < человек идущий)"""
 
@@ -46,7 +46,7 @@ class TestStudent(unittest.TestCase):
             student1.run()
             student2.walk()
         self.assertLess(student1.distance, student2.distance,
-                            f'Бегущий {student1.name} должен преодолеть дистанцию больше, чем идущий {student2.name}')
+                        f'Бегущий {student1.name} должен преодолеть дистанцию больше, чем идущий {student2.name}')
 
 
 if __name__ == '__main__':
