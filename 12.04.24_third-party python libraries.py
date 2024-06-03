@@ -17,7 +17,8 @@ spisok = (
             'Yekaterinburg',
             '     Perm    ',
             '    Kazan    ',
-            '  Berezniki  '
+            '  Berezniki  ',
+            'Krasnovishersk'
         )
 for i in range(len(spisok)):
     city = spisok[i]
