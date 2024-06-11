@@ -1,5 +1,4 @@
 import datetime
-
 import requests
 from bs4 import BeautifulSoup as Bs
 import csv
@@ -7,21 +6,20 @@ import csv
 
 def write_cmc_top():
     url = "https://coinmarketcap.com/ru/"
-    html = requests.get(url)
-    soup = Bs(html.text, 'lxml')
-    div = soup.find('div', class_="sc-14cb040a-2 hptPYH")
+    response = requests.get(url)
+    bs = Bs(response.text, 'lxml')
+    div = bs.find('div', 'sc-ae0cff98-2 tLNRm')  # sc-14cb040a-2 hptPYH
     table = div.find('tbody')
-    tr = table.find_all('tr', style="cursor:pointer")[:10]
+    tr = table.find_all('tr', style="cursor:pointer")[:20]
     all_types = []
     coast = []
     int_coast = []
     for p in tr:
         value = p.find('p', {'font-weight': 'semibold'}).text
-        coin = p.find('span', {'data-nosnippet': 'true', 'class': 'sc-7bc56c81-1'}).text
+        coin = p.find('span', {'data-nosnippet': 'true', 'class': 'sc-11478e5d-1'}).text
         all_types.append(value)
         coast.append(coin[1:])
         int_coast.append(int(coin[1:].replace(',', '')))
-
     data_file_name = datetime.datetime.now().strftime("%H.%M. %d.%m.%Y") + '.csv'
     with open(data_file_name, mode='w', newline='', encoding='utf-8') as file:
         writer = csv.writer(file, delimiter=' ')
