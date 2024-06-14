@@ -1,0 +1,2 @@
+2024-06-14 16:53:51,753 - ERROR: https://instagram.com, REQUEST FAILED: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
+2024-06-14 16:53:59,374 - ERROR: https://twitter.com, REQUEST FAILED: ('Connection aborted.', ConnectionResetError(10054, 'Удаленный хост принудительно разорвал существующее подключение', None, 10054, None))
