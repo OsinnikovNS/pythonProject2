@@ -1,2 +1,2 @@
-WARNING: https://amazon.com, response - 503
-WARNING: https://www.ozon.ru, response - 403
+2024-06-13 15:50:38,603 - WARNING: 'https://amazon.com', response - 503
+2024-06-13 15:50:39,848 - WARNING: 'https://www.ozon.ru', response - 403
